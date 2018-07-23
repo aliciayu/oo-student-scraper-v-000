@@ -25,7 +25,7 @@ end
     prof = Nokogiri::HTML(open(profile_url))
 
     links = prof.css(".social-icon-container a").collect {|icon| icon.attribute("href").value}
- 
+
     links.each do |link|
           if link.include?("twitter")
             student[:twitter] = link
@@ -65,4 +65,3 @@ end
     #       end
 
     #   end
-
